@@ -1,347 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Tommaso d'Orsi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<meta name="description" content="Tommaso d'Orsi is an Assistant Professor in the department of Computing Sciences at Bocconi. The bulk of his research lies somewhere in the intersection of algorithm design, learning theory, privacy and computational complexity."/>
-<meta charset="utf-8"/>
-<style type="text/css">
-	h1 {color: #4d8093}
+  <title>Tommaso D'Orsi</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Tommaso D'Orsi is an Assistant Professor in the department of Computing Sciences at Bocconi. He is part of the Theory group. The bulk of his research lies somewhere in the intersection of algorithm design, learning theory, privacy and computational complexity."/>
+  <meta name="google-site-verification" content="xTMoxPTmN_69F2CX32tUoXYpwacrNhe5C3fEC5Can_4" />
+  <style>
+    :root{
+      --accent:#4d8093;   /* publication titles */
+      --emph:#0b3f5c;     /* name, section titles, labels, active menu */
+      --link:#0E547F;     /* hyperlinks */
+      --ink:#222222;
+      --border:#e5e7eb;
+      --hover:#f5f7fa;
+      --gutter:24px;      /* sidebar <-> content spacing */
+      --photo-gap:80px;   /* NEW: text <-> image spacing (increase to push image "further right" from text) */
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; color:var(--ink); line-height:1.5; font-size:0.92em; font-family:"Helvetica","Arial",sans-serif; background:#fff; }
+
+    /* Headings and inline tags */
+    h1{ color:var(--emph); margin:0 0 1.5rem 0; }
     a{ text-decoration:none; }
-    a:link{color:#0E547F; text-decoration:underline;}
-    a:hover{text-decoration:underline;}
-	 a:title{color: #4d8093;}
+    a:link{ color:var(--link); text-decoration:underline; }
+    a:hover{ text-decoration:underline; }
+    author{ color:#38761d; }
+    conference{ font-weight:bold; }
+    ptitle{ color:var(--accent); font-weight:bolder; }
 
-    p.ex { height:auto; }
-    .alignleft { float: left; }
-    .alignright { float: right; }
-    hr { width:800px; }
-	
-    body{
-	line-height: 1.5;
-	padding: 4em 1em;
-	width:800px;
-	margin-left:auto;
-	margin-right:auto;
-	font-size: 0.92em;
-	font-family: "Helvetica", "Arial", sans-serif;
+    /* Layout */
+    .layout{
+      display:grid;
+      grid-template-columns: 200px minmax(0,1fr);
+      gap:var(--gutter);
+      max-width:1200px;
+      margin:0 auto;
+      padding:2.5rem 1rem;
     }
-	
- 	author{color: #38761d;}
 
-    conference { font-weight: bold; }
-    ptitle {
-		color: #4d8093;
-		font-weight: bolder;
-		<—!color: #1C73FA#4d8093;—>
+    /* Sidebar (aligned site-wide with content/photo) */
+    .sidebar{ margin-top:72px; }
+    .sidebar nav ul{ list-style:none; margin:0; padding:0; }
+    .sidebar nav li{ margin:6px 0; }
+    .sidebar nav a{ text-decoration:none; color:var(--link); padding:2px 0; display:inline-block; }
+    .sidebar .current{ font-weight:700; color:var(--emph); }
+
+    /* Content */
+    .content{ max-width:800px; }
+    hr{ border:0; border-top:1px solid var(--border); margin:1.25rem 0; }
+
+    /* Profile image:
+       - Slightly larger (288px)
+       - Left margin = --photo-gap (controls distance from text)
+       - Right margin = 0 so it hugs the right edge
+    */
+    img.profile{
+      float:right; vertical-align:middle;
+      margin:72px 0;
+      margin-right:0;
+      margin-left:var(--photo-gap);
+      width:200px; height:auto;
     }
-    bptitle {
-		font-weight: bolder;
+
+    /* Position uses same font treatment as Email/Office (normal body font & size) */
+    .position{ font-size:1em; font-weight:400; color:var(--ink); }
+    .affiliation{ margin:.25rem 0 .35rem 0; }
+
+    /* Contact labels share --emph */
+    .contact{ margin-bottom:.5rem; }
+    .label{ font-weight:600; color:var(--emph); text-decoration:none; margin-right:.25rem; }
+
+    /* Sections share --emph */
+    .section-title{ color:var(--emph); margin:1.25rem 0 .5rem 0; }
+
+    /* Events & papers formatting */
+    .events{ list-style:none; padding:0; margin:.5rem 0 0 0; }
+    .events li{ margin:.25rem 0; }
+
+    .papers{ list-style:none; margin:.5rem 0 0 0; padding:0; }
+    .pub{ margin:0 0 .9rem 0; }
+    .pub-title{ }
+    .pub-authors{ margin-left:1rem; }
+    .pub-venue{ margin-left:1rem; }
+
+    @media (max-width:900px){
+      .layout{ grid-template-columns: 1fr; }
+      .sidebar{ margin-top:0; }
+      img.profile{ float:none; display:block; margin:1rem auto; }
     }
-</style>
-<meta name="google-site-verification" content="xTMoxPTmN_69F2CX32tUoXYpwacrNhe5C3fEC5Can_4" />
+  </style>
 </head>
-   
-
-
 <body>
-	<img style="float:right; vertical-align:middle;margin:72px 0px; margin-right:10mm; margin-left:20mm;"  src="pictures/Hockney-tom.jpeg" width="256"; style="margin-right:20mm;">
-	<h1 style="margin-bottom:2mm;"> Tommaso d'Orsi </h1>
-	<u>Email</u>: <font > tommaso (dot) dorsi (at) unibocconi (dot) it</font>
-	<br>
-	<u> Office</u>: <font face="courier,Arial"> 2-C1-17</font>, Via Roentgen 1, 20136 Milan, Italy
+  <div class="layout">
+    <!-- LEFT MENU -->
+    <aside class="sidebar">
+      <nav aria-label="Primary">
+        <ul>
+          <li><span class="current">home</span></li>
+          <li><a href="./bio.html">brief bio</a></li>
+          <li><a href="./papers.html">papers</a></li>
+          <li><a href="./teaching.html">teaching</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-	<p>
-	I am an Assistant Professor in the department of <a href="https://cs.unibocconi.eu">Computing Sciences</a> at <a href="https://cs.unibocconi.eu">Bocconi</a>. I am part of the <a href="https://cs.unibocconi.eu/research/theory">Theory group</a>.</p>
+    <!-- MAIN -->
+    <main class="content">
+      <img class="profile" src="pictures/hockney-2.jpeg" alt="Portrait of Tommaso D'Orsi" width="10">
 
-<p>
-I am broadly interested in computer science, from both a theoretical and applied perspective. My research focuses on algorithm design, computational complexity, learning theory and privacy.
-</p>
+      <h1>Tommaso D'Orsi</h1>
+      <div class="position"><span class="label">Assistant Professor</span></div>
 
+      <div class="affiliation">
+        <a href="https://cs.unibocconi.eu">Computing Sciences</a>, <a href="https://cs.unibocconi.eu">Bocconi</a>
+      </div>
 
-<p>
-I received my PhD from <a href="https://ethz.ch/en.html">ETH Zurich</a>  where I was fortunate to have <author><a href="https://www.dsteurer.org" style="color: #38761d">David Steurer</a></author> as my advisor. After that, 
- I spent a year as a Research Fellow at Bocconi hosted by <author> <a href="https://lucatrevisan.github.io" style="color: #38761d ">Luca Trevisan</a></author>.
-I am a frequent visitor of <a href="https://ai.google/research/teams/algorithms-optimization/">Google Research</a>, where I spent part of my PhD and postdoc. 
-</p>
-<hr>
+      <div class="contact">
+        <div><span class="label">Email:</span> tommaso (dot) dorsi (at) unibocconi (dot) it</div>
+        <div><span class="label">Office:</span> <span style="font-family:courier,Arial;">2-C1-17</span>, Via Roentgen 1, 20136 Milan, Italy</div>
+      </div>
 
-<h3> Teaching: </h3>
+      <hr>
 
-<p>
-<b>Winter 2024: </b> (0874) Algorithms for Optimization and Inference [<a href="https://blackboard.unibocconi.it" style="color: #38761d ">Blackboard</a>]
-</p>
+      <!-- Research Interests -->
+      <h3 class="section-title">Research Interests</h3>
+      <p>Semidefinite Programming, Spectral Methods, Random Matrices, Robust Statistics, High Dimensional Statistics, Differential Privacy, Augmented-Learning.</p>
 
+      <hr>
 
-<p>
-	Office hours: by appointment.
-</p>
+      <!-- Events: link on the year -->
+      <h3 class="section-title">Recent &amp; Upcoming Events</h3>
+      <ul class="events">
+        <li>[<a href="./index.html">Sep. 2025</a>] Rutgers Business School, Rutgers</li>
+        <li>[<a href="./index.html">Sep. 2025</a>] Workshop on Combinatorial Optimization, Cargese</li>
+        <li>[<a href="./index.html">Apr. 2025</a>] CRISP: Charles River Symposium on Privacy, Harvard</li>
+        <li>[<a href="./index.html">Mar. 2025</a>] Laila Seminar, University of Milan</li>
+        <li>[<a href="./index.html">Oct. 2024</a>] Luca Trevisan Memorial Workshop, Simons Institute, Berkeley</li>
+        <li>[<a href="./index.html">Sep. 2024</a>] Google Research</li>
+      </ul>
 
+      <hr>
 
-<hr>
-<h3> Publications: </h3>
-	<p>
-    <ptitle>
-    		Tight Differentially Private PCA via Matrix Coherence
-	</ptitle>
-	 <br>
-		with 
-	<author><a href="https://www.glebnovikov.org" style="color: #38761d"> Gleb Novikov</a></author>, 
-	<conference>SODA 2026</conference>.
-    </p>
-	
+      <!-- Selected & Recent Papers -->
+      <h3 class="section-title">Representative and Recent Papers
+        [<a href="./papers.html">All Papers</a>]
+      </h3>
+      <ul class="papers">
+        <li class="pub">
+          <div class="pub-title"><ptitle>Tight Differentially Private PCA via Matrix Coherence</ptitle></div>
+          <div class="pub-authors">with <author><a href="https://www.glebnovikov.org" style="color:#38761d;">Gleb Novikov</a></author>,</div>
+          <div class="pub-venue"><conference>SODA 2026</conference>.</div>
+        </li>
 
-	<p>
-    <ptitle>
-    		Complexity of Local Search for CSPs Parameterized by Constraint Difference
-	</ptitle>
-	 <br>
-		with 
-	<author><a href="https://sites.google.com/view/aditya-anand17/home" style="color: #38761d ">Aditya Anand</a></author>,
-	<author><a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-	<author><a href="https://cs.nyu.edu/~anupamg/" style="color: #38761d ">Anupam Gupta</a></author>,
-	<author><a href="https://web.eecs.umich.edu/~euiwoong/" style="color: #38761d ">Euiwoong Lee</a></author>,
-	<author><a href="https://www.debmalyapanigrahi.org" style="color: #38761d ">Debmalya Panigrahi</a></author> and  
-	<author>Siji Peng</author>, 
-	<conference>IPEC 2025</conference>.
-    </p>
-	
-	<p>
-        <ptitle>
-            Sparsest cut and eigenvalue multiplicities on low degree Abelian Cayley graphs
-	</ptitle>
-	[<a href="https://arxiv.org/abs/2412.17115v2" style="color: #38761d ">arXiv</a>]
-            <br>
-            with 
-	    <author><a href="https://chrisjones.space" style="color: #38761d ">Chris Jones</a></author>,
-	    <author><a href="https://www.jakeruotolo.com" style="color: #38761d ">Jake Ruotolo</a></author>,
-	    <author><a href="https://salil.seas.harvard.edu" style="color: #38761d ">Salil Vadhan</a></author> and
-            <author><a href="https://jiyuzhang1994.github.io" style="color: #38761d ">Jiyu Zhang</a></author>,  
-	    <conference>APPROX 2025</conference>,
-		<br> 
-		invited to the special issue of <conference>Theory of Computing</conference>.
-        </p>
-
-	<p>
-        <ptitle>
-            On Finding Randomly Planted Cliques in Arbitrary Graphs
-	</ptitle>
-	[<a href="https://arxiv.org/abs/2505.06725" style="color: #38761d ">arXiv</a>]
-            <br>
-            with 
-	    <author>Francesco Agrimonti</author> and
-	    <author><a href="https://sites.google.com/view/marco-bressan/home" style="color: #38761d ">Marco Bressan</a></author>,  
-	    <conference>APPROX 2025</conference>.
-        </p>
-	
-	<p>
-        <ptitle>
-            Learning-augmented approximation algorithms for maximum cut and related problems
-	</ptitle>
-	[<a href="https://arxiv.org/abs/2402.18263" style="color: #38761d ">arXiv</a>]
-            <br>
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Sparsest cut and eigenvalue multiplicities on low degree Abelian Cayley graphs</ptitle>
+            [<a href="https://arxiv.org/abs/2412.17115v2">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-	    <author><a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-	    <author><a href="https://cs.nyu.edu/~anupamg/" style="color: #38761d ">Anupam Gupta</a></author>,
-	    <author><a href="https://web.eecs.umich.edu/~euiwoong/" style="color: #38761d ">Euiwoong Lee</a></author> and
-            <author><a href="https://www.debmalyapanigrahi.org" style="color: #38761d ">Debmalya Panigrahi</a></author>,  
-	    <conference> NeurIPS 2024</conference>.
-        </p>
-
-	<p>
-        <ptitle>
-            A Near-Linear Time Approximation Algorithm for Beyond-Worst-Case Graph Clustering
-	</ptitle>
-	[<a href="http://arxiv.org/abs/2406.04857" style="color: #38761d ">arXiv</a>]
-        <br>
-        with
-	<a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-	and <author>Aida Mousavifar</author>,
-	<conference>ICML 2024</conference>.
-        </p>
-
-	<p>
-        <ptitle>
-            Multi-View Stochastic Block Models
-	</ptitle>
-	[<a href="http://arxiv.org/abs/2406.04860" style="color: #38761d ">arXiv</a>]
-        <br>
-        with
-	<a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-        <a href="https://sites.google.com/site/silviolattanzi/" style="color: #38761d ">Silvio Lattanzi</a></author>,
-	and <author><a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color: #38761d">Rajai Nasser</a></author>,
-	<conference>ICML 2024</conference>.
-        </p>
-
-	<p>
-        <ptitle>
-            Perturb-and-Project: Differentially Private Similarities and Marginals
-	</ptitle>
-	[<a href="http://arxiv.org/abs/2406.04868" style="color: #38761d ">arXiv</a>]
-        <br>
-        with
-	<a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-        <a href="https://www.epasto.org" style="color: #38761d ">Alessandro Epasto</a></author>,
-	<a href="https://people.csail.mit.edu/mirrokni/Welcome.html" style="color: #38761d ">Vahab Mirrokni</a></author>
-        and <author> Peilin Zhong</author>,  
-	<conference>ICML 2024 (spotlight)</conference>, <conference> TPDP 2024</conference>.
-        </p>
-	
-	<p>
-        <ptitle>
-            Private graphon estimation via sum-of-squares
-	</ptitle>
-	[<a href="https://arxiv.org/abs/2403.12213" style="color: #38761d ">arXiv</a>]
-        <br>
+            <author><a href="https://chrisjones.space" style="color:#38761d;">Chris Jones</a></author>,
+            <author><a href="https://www.jakeruotolo.com" style="color:#38761d;">Jake Ruotolo</a></author>,
+            <author><a href="https://salil.seas.harvard.edu" style="color:#38761d;">Salil Vadhan</a></author> and
+            <author><a href="https://jiyuzhang1994.github.io" style="color:#38761d;">Jiyu Zhang</a></author>,
+          </div>
+          <div class="pub-venue">
+            <conference>APPROX 2025</conference>, invited to the special issue of <conference>Theory of Computing</conference>.
+          </div>
+        </li>
+        
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Private graphon estimation via sum-of-squares</ptitle>
+            [<a href="https://arxiv.org/abs/2403.12213">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-	    <author><a href="https://chen-hj.github.io" style="color: #38761d "> Hongjie Chen</a></author>,
-        <author> Jingqiu Ding</author>, <author> Yiding Hua</author>, <author> Chih-Hung Liu</author>
-	    and <author> <a href="https://www.dsteurer.org" style="color: #38761d">David Steurer</a></author>,  
-	    <conference>STOC 2024</conference>.
-        </p>
-    
-        <p>
-        <ptitle>
-            Private estimation algorithms for stochastic block models and mixture models
-	    </ptitle>
-            [<a href="https://arxiv.org/abs/2301.04822" style="color: #38761d ">arXiv</a>]
-            <br>
+            <author><a href="https://chen-hj.github.io" style="color:#38761d">Hongjie Chen</a></author>,
+            <author>Jingqiu Ding</author>, <author>Yiding Hua</author>, <author>Chih-Hung Liu</author> and
+            <author><a href="https://www.dsteurer.org" style="color:#38761d">David Steurer</a></author>,
+          </div>
+          <div class="pub-venue"><conference>STOC 2024</conference>.</div>
+        </li>
+
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Private estimation algorithms for stochastic block models and mixture models</ptitle>
+            [<a href="https://arxiv.org/abs/2301.04822">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-	    <author><a href="https://chen-hj.github.io" style="color: #38761d "> Hongjie Chen</a></author>,
-	    <a href="https://www.di.ens.fr/~vcohen/" style="color: #38761d ">Vincent Cohen-Addad</a></author>,
-	    <a href="https://www.epasto.org" style="color: #38761d ">Alessandro Epasto</a></author>,
-	    <author> <a href="https://jimola.github.io" style="color: #38761d">Jacob Imola</a></author>,
-	    <author> <a href="https://www.dsteurer.org" style="color: #38761d">David Steurer</a></author>,  
-	    and	<author><a href="https://stefantiegel.com" style="color: #38761d "> Stefan Tiegel</a></author>,
-	    <conference>NeurIPS 2023 (spotlight)</conference>.
-        </p>
-<p>
-	    <ptitle>
-	    	Information-computation gaps in robust statistics
-	    </ptitle>
-	    [<a href="docs/thesis-v1.5.pdf">pdf</a>]
-	    <br>
-	    <conference>Dissertation</conference>. Recipient of the <conference>ETH Medal 2023</conference>.
-	    <br>
-
-</p>
-	    <p>
-        <ptitle>
-            Reaching the Kesten-Stigum Threshold in the Stochastic Block Model under Node Corruptions
-	    </ptitle>
-            [<a href="https://arxiv.org/abs/2305.10227" style="color: #38761d ">arXiv</a>]
-            <br>
+            <author><a href="https://chen-hj.github.io" style="color:#38761d">Hongjie Chen</a></author>,
+            <author><a href="https://www.di.ens.fr/~vcohen/" style="color:#38761d">Vincent Cohen-Addad</a></author>,
+            <author><a href="https://www.epasto.org" style="color:#38761d">Alessandro Epasto</a></author>,
+            <author><a href="https://jimola.github.io" style="color:#38761d">Jacob Imola</a></author>,
+            <author><a href="https://www.dsteurer.org" style="color:#38761d">David Steurer</a></author>, and
+            <author><a href="https://stefantiegel.com" style="color:#38761d">Stefan Tiegel</a></author>,
+          </div>
+          <div class="pub-venue"><conference>NeurIPS 2023 (spotlight)</conference>.</div>
+        </li>
+        
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Higher degree sum-of-squares relaxations robust against oblivious outliers</ptitle>
+            [<a href="https://arxiv.org/abs/2211.07327">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-            <author> Jingqiu Ding</author>, <author> Yiding Hua</author>,
-            <author> <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author>, 
-            <conference>COLT 2023</conference>.
-	     </p>
-
-	    <p>
-            <ptitle>
-                A Ihara-Bass formula for non-boolean matrices and strong refutations of random CSPs
-            </ptitle>
-            [<a href="https://arxiv.org/abs/2204.10881" style="color: #38761d ">arXiv</a>]
-            <br>
+            <author><a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color:#38761d">Rajai Nasser</a></author>,
+            <author><a href="https://www.glebnovikov.org" style="color:#38761d">Gleb Novikov</a></author> and
+            <author><a href="https://www.dsteurer.org" style="color:#38761d">David Steurer</a></author>,
+          </div>
+          <div class="pub-venue"><conference>SODA 2023</conference>.</div>
+        </li>
+        
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Robust Recovery for Stochastic Block Models</ptitle>
+            [<a href="https://arxiv.org/abs/2111.08568">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-            <author> <a href="https://lucatrevisan.github.io" style="color: #38761d ">Luca Trevisan</a></author>,  <conference>CCC 2023</conference>.
-            </p>
+            <author>Jingqiu Ding</author>,
+            <author><a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color:#38761d">Rajai Nasser</a></author> and
+            <author><a href="https://www.dsteurer.org" style="color:#38761d">David Steurer</a></author>,
+          </div>
+          <div class="pub-venue"><conference>FOCS 2021</conference>.</div>
+        </li>
 
-	    <p>
-            <ptitle>
-                Higher degree sum-of-squares relaxations robust against oblivious outliers
-            </ptitle>
-            [<a href="https://arxiv.org/abs/2211.07327" style="color: #38761d ">arXiv</a>]
-            <br>
+        <li class="pub">
+          <div class="pub-title">
+            <ptitle>Sparse PCA: Algorithms, Adversarial Perturbations and Certificates</ptitle>
+            [<a href="https://arxiv.org/abs/2011.06585">arXiv</a>]
+          </div>
+          <div class="pub-authors">
             with
-	    <author> <a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color: #38761d">Rajai Nasser</a></author>, <author><a href="https://www.glebnovikov.org" style="color: #38761d"> Gleb Novikov</a></author> and <author> <a href="https://www.dsteurer.org" style="color: #38761d">David Steurer</a></author>,  
-	    <conference>SODA 2023</conference>.
-            </p>
-          
-            <p>
-            <ptitle>
-                On the well-spread property and its relation to linear regression
-            </ptitle>
-            [<a href="https://arxiv.org/abs/2206.08092" style="color: #38761d ">arXiv</a>]
-            <br>
-            with
-            <author><a href="https://chen-hj.github.io" style="color: #38761d "> Hongjie Chen</a></author>, <conference>COLT 2022</conference>.
-            </p>
-            
-            <p>
-            <ptitle>
-                Fast algorithm for overcomplete order-3 tensor decomposition
-            </ptitle>
-            [<a href="https://arxiv.org/abs/2202.06442" style="color: #38761d ">arXiv</a>]
-            <br>
-            with
-	    <author> Jingqiu Ding</author>, <author> Chih-Hung Liu</author>, <author> <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author> and <author><a href="https://stefantiegel.com" style="color: #38761d "> Stefan Tiegel</a></author>, <conference>COLT 2022</conference>.
-            </p>
-            
-			<p>
-			<ptitle>
-				Robust Recovery for Stochastic Block Models
-			</ptitle>
-            [<a href="https://arxiv.org/abs/2111.08568" style="color: #38761d ">arXiv</a>]
-			<br>
-			with 
-			<author> Jingqiu Ding</author>, <author><a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color: #38761d">Rajai Nasser</a> </author> and <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author>,
-			<conference> FOCS 2021</conference>.
-			</p>
-
-			<p>
-			<ptitle>
-				Consistent Estimation for PCA and Sparse Regression with Oblivious Outliers
-			</ptitle>
-            [<a href="https://arxiv.org/abs/2111.02966" style="color: #38761d ">arXiv</a>]
-			<br>
-			with 
-			<author> Chih-Hung Liu</author>, <author><a href="https://scholar.google.ch/citations?user=uzoQLkwAAAAJ&hl=en" style="color: #38761d">Rajai Nasser</a></author>, <author><a href="https://www.glebnovikov.org" style="color: #38761d"> Gleb Novikov</a></author>, <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author> and <author><a href="https://stefantiegel.com" style="color: #38761d "> Stefan Tiegel</a></author>,
-			<conference> NeurIPS 2021</conference>.
-			</p>
-
-			<p>
-			<ptitle>
-				The Complexity of Sparse Tensor PCA
-			</ptitle>
-			[<a href="https://arxiv.org/abs/2106.06308" style="color: #38761d ">arXiv</a>]
-			<br>
-			with 
-			<author><a href="https://cxjdavin.github.io" style="color: #38761d"> Davin Choo</a></author>,
-			<conference> NeurIPS 2021</conference>.
-			</p>
-				
-
-			<p>
-			<ptitle>
-				Consistent regression when oblivious outliers overwhelm
-			</ptitle>
-			[<a href="https://arxiv.org/abs/2009.14774" style="color: #38761d ">arXiv</a>]
-			<br>
-			with 
-			<author><a href="https://www.glebnovikov.org" style="color: #38761d"> Gleb Novikov</a></author> and <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author>,
-			<conference> ICML 2021</conference>.
-			</p>
-
-			<p>
-			<ptitle>
-				Sparse PCA: Algorithms, Adversarial Perturbations and Certificates
-			</ptitle>
-			[<a href="https://arxiv.org/abs/2011.06585" style="color: #38761d ">arXiv</a>]
-			<br>
-			with 
-			<author> <a href="https://www.cs.cmu.edu/~praveshk/" style="color: #38761d ">Pravesh Kothari</a></author>, <author><a href="https://www.glebnovikov.org" style="color: #38761d"> Gleb Novikov</a></author> and <a href="https://www.dsteurer.org" style="color: #38761d ">David Steurer</a></author>,
-			<conference> FOCS 2020</conference>.
-			</p>
-
-			<p>
-			<ptitle>
-				Coloring graphs with no clique immersion
-			</ptitle>
-			<br>
-			with 
-			<a href="https://http://wwwusers.di.uniroma1.it/~wollan/" style="color: #38761d ">Paul Wollan</a></author>,
-			<conference> Discrete Mathematics 2018</conference>.
-			</p>
-  </body>
+            <author><a href="https://www.cs.cmu.edu/~praveshk/" style="color:#38761d">Pravesh Kothari</a></author>,
+            <author><a href="https://www.glebnovikov.org" style="color:#38761d">Gleb Novikov</a></author> and
+            <author><a href="https://www.dsteurer.org" style="color:#38761d">David Steurer</a></author>,
+          </div>
+          <div class="pub-venue"><conference>FOCS 2020</conference>.</div>
+        </li>
+      </ul>
+    </main>
+  </div>
+</body>
 </html>
+
