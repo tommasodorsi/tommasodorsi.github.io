@@ -3,7 +3,7 @@
 <head>
   <title>Brief bio — Tommaso D'Orsi</title>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="viewport" content="width=1200, initial-scale=1">
   <meta name="description" content="Brief biography of Tommaso D'Orsi."/>
   <style>
     :root{ --accent:#4d8093; --emph:#0b3f5c; --link:#0E547F; --ink:#222; --border:#e5e7eb; }
@@ -13,7 +13,7 @@
     a{ text-decoration:none; } a:link{ color:var(--link); text-decoration:underline; } a:hover{ text-decoration:underline; }
     author{ color:#38761d; } conference{ font-weight:bold; } ptitle{ color:var(--accent); font-weight:bolder; }
 
-    .layout{ display:grid; grid-template-columns: 200px minmax(0,1fr); gap:24px; max-width:1200px; margin:0 auto; padding:2.5rem 1rem; }
+    .layout{ display:grid; grid-template-columns: 200px minmax(0,1fr); gap:24px; max-width:1200px; min-width: 900px; margin:0 auto; padding:2.5rem 1rem; }
     .sidebar{ margin-top:72px; }
     .sidebar nav ul{ list-style:none; margin:0; padding:0; }
     .sidebar nav li{ margin:6px 0; }
@@ -21,8 +21,6 @@
     .sidebar .current{ font-weight:700; color:var(--emph); }
     .content{ max-width:800px; }
     hr{ border:0; border-top:1px solid var(--border); margin:1.25rem 0; }
-
-    @media (max-width:900px){ .layout{ grid-template-columns:1fr; } .sidebar{ margin-top:0; } }
   </style>
 </head>
 <body>
